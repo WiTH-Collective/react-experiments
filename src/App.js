@@ -10,14 +10,15 @@ function App() {
     // <div className="App">
     //   <Posts />
     // </div>
-
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Posts} />
-        <Route path="/posts/:id" component={PostDetail} />
-        <Route path="/" render={() => <div>404</div>} />
-      </Switch>
-    </BrowserRouter>
+    <div className="wrapper">
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Posts} />
+          <Route path="/posts/:id" component={PostDetail} />
+          <Route path="/" render={() => <div>404</div>} />
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 
