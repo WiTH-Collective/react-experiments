@@ -33,6 +33,13 @@ class PostDetail extends Component {
           <title>{this.state.post.title}</title>
           <meta name="description" content={this.state.post.body.slice(0, 100) + "..."} />
           <meta name="keywords" content={"React Helmet Test, " + this.state.post.title.split(" ")} />
+
+          {/* OG TAGS */}
+          <meta property="og:title" content={this.state.post.title} />
+          <meta property="og:url" content={"https://with-react-test.netlify.com" + window.location.pathname} />
+          <meta property="og:image" content={Lupe} />
+          <meta property="og:type" content="article" />
+          <meta property="og:description" content={this.state.post.body.slice(0, 100) + "..."} />
         </Helmet>
       </div>
     );
