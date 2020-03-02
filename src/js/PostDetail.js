@@ -23,7 +23,7 @@ class PostDetail extends Component {
   render() {
     return (
       <div className="container">
-        <h2>{this.state.post.title}</h2>
+        <h1>{this.state.post.title}</h1>
         <article>{this.state.post.body}</article>
         <img src={Lupe} alt="A very cute doggo" />
         <p>
@@ -32,6 +32,7 @@ class PostDetail extends Component {
         <Helmet>
           <title>{this.state.post.title}</title>
           <meta name="description" content={this.state.post.body.slice(0, 100) + "..."} />
+          <meta name="keywords" content={"React Helmet Test, " + this.state.post.title.split(" ")} />
         </Helmet>
       </div>
     );

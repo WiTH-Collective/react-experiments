@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 class Posts extends Component {
@@ -23,8 +24,13 @@ class Posts extends Component {
     ));
     return (
       <div>
-        <h2>All Posts</h2>
+        <h1>All Posts</h1>
         <ul>{posts}</ul>
+        <Helmet>
+          <title>{"All Posts Go Here"}</title>
+          <meta name="description" content={"A list of posts"} />
+          <meta name="keywords" content={"React Helmet Test, Lists, Things, Cats"} />
+        </Helmet>
       </div>
     );
   }
