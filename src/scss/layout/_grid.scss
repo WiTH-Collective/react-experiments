@@ -1,0 +1,14 @@
+section {
+  background-image: none;
+  background-repeat: repeat-x;
+  display: flex;
+
+  &.meet-the-chefs {
+    background-image: url("../../img/backgrounds/texture-rough-paint.jpg");
+  }
+
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

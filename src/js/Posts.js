@@ -24,8 +24,12 @@ class Posts extends Component {
     ));
     return (
       <div>
-        <h1>All Posts</h1>
-        <ul>{posts}</ul>
+        <section className="meet-the-chefs">
+          <div className="container">
+            <h1>All Posts</h1>
+            <ul>{posts}</ul>
+          </div>
+        </section>
         <Helmet>
           <title>{"All Posts Go Here"}</title>
           <meta name="description" content={"A list of posts"} />
