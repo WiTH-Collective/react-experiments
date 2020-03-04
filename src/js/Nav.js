@@ -1,17 +1,22 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../img/logos/rrd-logo-01.svg";
 
-class Nav extends Component {
-  render() {
+
+function Nav () {
+
+  const [isToggled, setToggled] = useState(false);
+  const toggleTrueFalse = () => setToggled(!isToggled);
+
+  let navClass = null;
+  if(isToggled){
+    navClass = "isActive"
+  }
+
     return (
-      <div className="Nav">
+      <div className={"Nav " + navClass}>
         <div className="container">
-          <div className="logo-container">
-            <Link className="logo" to="/">
-              <img src={Logo} alt="Red Rock Deli" />
-            </Link>
-          </div>
+          
           <nav>
             <ul>
               <li>
@@ -19,11 +24,13 @@ class Nav extends Component {
                   SECRET SUPPERS
                 </Link>
               </li>
+              <li><div className="divider"></div></li>
               <li>
                 <Link className="logo" to="/our-range">
                   OUR RANGE
                 </Link>
               </li>
+              <li><div className="divider"></div></li>
               <li>
                 <Link className="logo" to="/contact">
                   CONTACT
@@ -31,10 +38,18 @@ class Nav extends Component {
               </li>
             </ul>
           </nav>
+
+          <div className="hamburger" onClick={toggleTrueFalse}></div>
+
+          <div className="logo-container">
+            <Link className="logo" to="/">
+              <img src={Logo} alt="Red Rock Deli" />
+            </Link>
+          </div>
         </div>
       </div>
     );
-  }
+  
 }
 
 export default Nav;

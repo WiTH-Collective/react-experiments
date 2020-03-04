@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 // import useWindowSize from "./hooks/useWindowSize.js";
 import FeedYourCuriosity from "../img/lockups/feed-your-curiosity---white.png";
-import { Player } from "video-react";
 
 function Hero() {
   const [dimensions, setDimensions] = React.useState({
@@ -19,6 +18,7 @@ function Hero() {
 
       <div className="container">
         <img className="lockup" src={FeedYourCuriosity} alt="Red Rock Deli" />
+        <div class="scroll-prompt"></div>
       </div>
     </div>
   );

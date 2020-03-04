@@ -4,9 +4,9 @@
   height: 50vh;
   min-height: 300px;
   position: relative;
-  overflow: hidden;
-  top: $navHeight;
-  background: red;
+  // overflow: hidden;
+  top: $navHeightMobile;
+  background: black;
 
   .background-video {
     width: 100%;
@@ -30,8 +30,37 @@
     justify-content: center;
 
     .lockup {
-      width: 40%;
-      max-width: 550px;
+      width: 60%;
+      max-width: 400px;
+    }
+
+    .scroll-prompt{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+
+      &:after{
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: -1px;
+        width: 2px;
+        height: 80px;
+        background: white;
+      }
+    }
+  }
+
+  @include lg {
+    top: $navHeight;
+
+    .container {  
+      .lockup {
+        width: 40%;
+        max-width: 550px;
+      }
     }
   }
 }
+
+
