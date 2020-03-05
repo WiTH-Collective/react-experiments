@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import Lupe from "../img/lupe.jpg";
+// import Lupe from "../img/lupe.jpg";
 
 class PostDetail extends Component {
   state = {
@@ -25,7 +25,7 @@ class PostDetail extends Component {
       <div className="container">
         <h1>{this.state.post.title}</h1>
         <article>{this.state.post.body}</article>
-        <img src={Lupe} alt="A very cute doggo" />
+        {/* <img src={Lupe} alt="A very cute doggo" /> */}
         <p>
           <Link to="/">Back to all articles</Link>
         </p>
@@ -37,7 +37,7 @@ class PostDetail extends Component {
           {/* OG TAGS */}
           <meta property="og:title" content={this.state.post.title} />
           <meta property="og:url" content={"https://with-react-test.netlify.com" + window.location.pathname} />
-          <meta property="og:image" content={Lupe} />
+          {/* <meta property="og:image" content={Lupe} /> */}
           <meta property="og:type" content="article" />
           <meta property="og:description" content={this.state.post.body.slice(0, 100) + "..."} />
         </Helmet>

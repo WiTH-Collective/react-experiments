@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import logo from "./logo.svg";
 import "./scss/App.scss";
 import Posts from "./js/Posts";
 import PostDetail from "./js/PostDetail";

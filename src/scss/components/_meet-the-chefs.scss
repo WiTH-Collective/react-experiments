@@ -1,0 +1,15 @@
+.MeetTheChefs {
+  background: url("../../img/backgrounds/texture-rough-paint.jpg");
+  background-position: top center;
+  background-size: cover;
+
+  margin: 0;
+  padding: 60px;
+
+  .button-primary{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}

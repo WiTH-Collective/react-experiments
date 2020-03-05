@@ -5,12 +5,15 @@
 @import "base/reset";
 @import "base/typography";
 
+@import "components/buttons";
+@import "components/hero";
+@import "components/secret-suppers";
+@import "components/meet-the-chefs";
+
 @import "layout/navigation";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/forms";
-
-@import "pages/home";
 
 @import "root";
