@@ -1,10 +1,10 @@
 import React from "react";
 
 const ButtonPrimary = props => {
-  let buttonClass = "button-primary";
-  props.classNames ? buttonClass += " " + props.classNames : null;
+  let classes = "button-primary";
+  if (props.isBlack) classes += " button-black";
   return (
-    <button className={buttonClass}>
+    <button className={classes}>
       {props.buttonText}
       <span />
     </button>

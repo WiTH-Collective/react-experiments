@@ -4,6 +4,9 @@ import { Helmet } from "react-helmet";
 import Hero from "./Hero";
 import SecretSuppers from "./SecretSuppers";
 import MeetTheChefs from "./MeetTheChefs";
+import DiscoverTheRange from "./DiscoverTheRange";
+import WhereToBuy from "./WhereToBuy";
+import InstaFeed from "./InstaFeed";
 
 class HomePage extends Component {
   state = {
@@ -16,6 +19,9 @@ class HomePage extends Component {
         <Hero />
         <SecretSuppers />
         <MeetTheChefs />
+        <DiscoverTheRange />
+        <WhereToBuy />
+        <InstaFeed />
 
         <Helmet>
           <title>{"Red Rock Deli®"}</title>

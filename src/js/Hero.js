@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-// import useWindowSize from "./hooks/useWindowSize.js";
 import FeedYourCuriosity from "../img/lockups/feed-your-curiosity---white.png";
 
 function Hero() {
@@ -27,9 +26,11 @@ function Hero() {
         </video>
       </div>
 
-      <div className="container">
-        <img className="lockup" src={FeedYourCuriosity} alt="Red Rock Deli" />
-        <div className="scroll-prompt" />
+      <div className="absolute-overlay-container">
+        <div className="container">
+          <img className="lockup" src={FeedYourCuriosity} alt="Red Rock Deli" />
+          <div className="scroll-prompt" />
+        </div>
       </div>
     </section>
   );

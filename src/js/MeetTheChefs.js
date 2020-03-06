@@ -1,31 +1,97 @@
 import React from "react";
 // import secretSuppersBackground from "../img/backgorund-secret-suppers.jpg";
-// import secretSuppersLockup from "../img/lockups/secret-suppers-lockup--white.png";
+import ChefImage1 from "../img/meet-the-chefs-placeholder-1.jpg";
+import ChefImage2 from "../img/meet-the-chefs-placeholder-2.jpg";
+import ChefImage3 from "../img/meet-the-chefs-placeholder-3.jpg";
+import locationImage from "../img/secret-locations.jpg";
 import ButtonPrimary from "./components/ButtonPrimary";
+import Chef from "./components/chef";
+import { Link } from "react-router-dom";
 
 const MeetTheChefs = () => {
   return (
     <section className="MeetTheChefs">
       <div className="container2">
-        <div className="content">
-          <div className="image-holder content-cover">
-            {/* <img src={secretSuppersBackground} alt="Red Rock Deli, Secret Suppers" /> */}
-            <div className="gradient-overlay" />
-          </div>
+        <h2>MEET THE CHEFS</h2>
 
-          {/* <img className="lockup" src={secretSuppersLockup} alt="Red Rock Deli, Secret Suppers" /> */}
+        <div className="black-background">
+          <div className="content">
+            <div class="chef-holder">
+              <Chef imageUrl={ChefImage1} chefName="Chef Name 1" key={1} />
+              <Chef imageUrl={ChefImage2} chefName="Chef Name 2" key={2} />
+              <Chef imageUrl={ChefImage3} chefName="Chef Name 3" key={3} />
+            </div>
 
-          <div class="copy">
-            <h2>MEET THE CHEFS</h2>
-            <p>
-              A series of dining experiences hosted by some of Australia's most loved chefs with specially crafted menus
-              inspired by Red Rock Deli unique flavour combinations.
-            </p>
+            <div class="copy">
+              <h2>THE SECRET SUPPERS</h2>
+              <p>
+                New flavour combinations, new secret locations - find out more below and enter the ballot for your chance to
+                secure your tickets.
+              </p>
+            </div>
+
+            <div class="locations">
+              <div class="locations-list">
+                <Location
+                  date={"May 21, 2020"}
+                  location={"Secret Sydney Location"}
+                  chefName={"Chef Name 1"}
+                  eventURL="events/e1"
+                />
+                <Location
+                  date={"May 28, 2020"}
+                  location={"Secret Melbourne Location"}
+                  chefName={"Chef Name 2"}
+                  eventURL="events/e2"
+                />
+                <Location
+                  date={"Sept 16, 2020"}
+                  location={"Secret Sydney Location"}
+                  chefName={"Chef Name 3"}
+                  eventURL="events/e3"
+                />
+                <Location
+                  date={"Sept 18, 2020"}
+                  location={"Secret Melbourne Location"}
+                  chefName={"Chef Name 4"}
+                  eventURL="events/e4"
+                />
+              </div>
+              <img
+                src={locationImage}
+                className="locations-image"
+                alt="Shhh, stay up to date with our latest secret locations."
+              />
+            </div>
           </div>
-          <ButtonPrimary buttonText="Primary CTA Button" />
+        </div>
+
+        <div className="looking-for-a-ticket">
+          <div>
+            <div className="icon icon-ticket" />
+            <h2>LOOKING FOR A TICKET?</h2>
+            <ButtonPrimary buttonText="Buy your ticket" />
+          </div>
         </div>
       </div>
     </section>
+  );
+};
+
+const Location = props => {
+  return (
+    <Link className="location" to={props.eventURL}>
+      <div class="location-copy">
+        <h3 className="date">{props.date}</h3>
+        <p className="location-text">{props.location}</p>
+        <br />
+        <h5 className="name">
+          <em>Hosted by </em>
+          {props.chefName}
+        </h5>
+      </div>
+      <div class="chevron" />
+    </Link>
   );
 };
 
