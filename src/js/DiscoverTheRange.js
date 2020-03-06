@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import ButtonPrimary from "./components/ButtonPrimary";
 
 const DiscoverTheRange = props => {
   const carousel = useRef(null);
@@ -14,6 +15,9 @@ const DiscoverTheRange = props => {
       <div className="scroll-prompt scroll-prompt-top" />
       <h2>Discover The Range</h2>
       <div ref={carousel} className="Carousel" />
+      <div>
+        <ButtonPrimary buttonText="Button Primary" />
+      </div>
     </section>
   );
 };

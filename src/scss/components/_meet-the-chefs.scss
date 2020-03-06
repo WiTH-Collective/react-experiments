@@ -2,8 +2,8 @@
   background: url("../../img/backgrounds/texture-rough-paint.jpg");
   background-position: top;
   background-size: cover;
+  padding: 60px 0;
   margin: 0;
-  padding: 120px 60px;
 
   .button-primary {
     position: absolute;
@@ -29,7 +29,7 @@
   // ---------------
   .black-background {
     background: black;
-    padding: 0 80px;
+    padding: 0 40px;
     margin-top: 150px;
     margin-bottom: 150px;
 
@@ -43,7 +43,7 @@
         top: -80px;
         position: absolute;
         display: flex;
-        justify-content: space-between;
+        flex-flow: column;
       }
 
       .locations {
@@ -109,6 +109,28 @@
       }
     }
   }
+  @include lg {
+    padding: 120px 60px;
+    margin: 0 60px;
+
+    .black-background {
+      background: black;
+      padding: 0 80px;
+      margin-top: 150px;
+      margin-bottom: 150px;
+
+      .content {
+        position: relative;
+        padding-top: 250px;
+        padding-bottom: 500px;
+
+        .chef-holder {
+          flex-flow: row;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
   // looking for a ticket
   .looking-for-a-ticket {
     margin: 0 auto;
@@ -128,6 +150,12 @@
       padding: 40px 60px;
       position: relative;
     }
+
+    @include lg {
+      h2 {
+        font-size: 30px;
+      }
+    }
   }
 }
 
@@ -135,8 +163,8 @@
 .Chef {
   background-repeat: no-repeat;
   background-size: cover;
-  width: 32%;
-  min-height: 300px;
+  width: 100%;
+  min-height: 240px;
   display: flex;
   align-items: flex-end;
 
@@ -146,16 +174,33 @@
     width: 100%;
 
     h3 {
-      padding-left: 60px;
+      padding-left: 40px;
+      font-size: 18px;
+    }
+    span {
+      position: absolute;
+      left: 0;
+      top: -7px;
+      width: 30px;
+      height: 30px;
+      background: url("../../img/ui/chevron-black-circle.svg") no-repeat;
+      background-size: contain;
+    }
+  }
 
-      span {
-        position: absolute;
-        left: 0;
-        top: -15px;
-        width: 50px;
-        height: 50px;
-        background: url("../../img/ui/chevron-black-circle.svg") no-repeat;
-        background-size: contain;
+  @include lg {
+    width: 32%;
+    min-height: 300px;
+
+    .chefName {
+      h3 {
+        padding-left: 60px;
+
+        span {
+          top: -15px;
+          width: 50px;
+          height: 50px;
+        }
       }
     }
   }

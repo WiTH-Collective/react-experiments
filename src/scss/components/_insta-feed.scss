@@ -6,6 +6,7 @@
   background-image: url("../../img/backgrounds/instafeed-background.jpg");
   background-size: cover;
   background-position: top;
+  overflow: hidden;
 
   .content {
     max-width: 700px;
@@ -26,6 +27,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+    width: 1120px;
+    overflow-x: unset;
 
     a.item {
       width: 31.25%;
@@ -50,5 +53,12 @@
 
   .showMore {
     @include flexCenter;
+  }
+
+  @include lg {
+    .feed {
+      width: auto;
+      overflow-x: unset;
+    }
   }
 }

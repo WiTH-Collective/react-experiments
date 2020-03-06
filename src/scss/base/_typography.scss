@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-  font-size: 52px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -80,5 +80,15 @@ h5 {
     font-weight: bold;
     transform: skewX(-10deg);
     margin-right: 5px;
+  }
+}
+
+@include lg {
+  h2 {
+    font-size: 52px;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 }

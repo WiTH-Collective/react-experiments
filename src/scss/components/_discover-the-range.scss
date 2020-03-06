@@ -6,4 +6,11 @@
   background-image: url("../../img/backgrounds/texture-blue-products-background.jpg");
   background-size: cover;
   background-position: top;
+
+  @include flexCenter;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 40px;
+  }
 }
