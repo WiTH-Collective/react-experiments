@@ -2,21 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import FeedYourCuriosity from "../img/lockups/feed-your-curiosity---white.png";
 
 function Hero() {
-  // const vid = useRef();
-  // const [dimensions, setDimensions] = useState({
-  //   height: window.innerHeight,
-  //   width: window.innerWidth
-  // });
-
   const videoRef = useRef(null);
-
-  useEffect(() => {
-    // console.log(videoRef.current);
-    // videoRef.current.play();
-    setTimeout(() => {
-      videoRef.current.play();
-    }, 100);
-  }, []);
 
   return (
     <section className="Hero">
